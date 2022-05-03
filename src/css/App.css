@@ -1,0 +1,62 @@
+@import "popup.css";
+:root{
+  /*-------------colors-----------*/
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-blue: #005fca;
+  --coloe-bright-blue: #60d0ff;
+  --color-light-blue: #f2faff;
+  --color-yellow: #FEE7C9;
+  --color-red: red;
+
+  /*-------------fonts-----------*/
+  --heading-font:'Roboto', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+
+  /*-------------font size-----------*/
+  /*.5rem=8px, 1rem=16px, 1.5rem=24px */
+  --heading-font-size: 1.5rem;
+  --search-font-size: 1.3rem;
+  --body-font-size: 1rem;
+
+  /*-------------padding-----------*/
+  --xlarge-padding: 60px;
+  --large-padding: 50px;
+  --mid-padding: 25px;
+  --small-padding: 15px;
+  --xsmall-padding: 10px;
+  --xxsmall-padding: 5px;
+
+
+
+  /*-------------font weight-----------*/
+
+
+  /*-------------z index-----------*/
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.App{
+  margin: 0;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.offscreen{
+  position: absolute;
+  left: -10000px;
+}
+.none{
+  display: none;
+}
+.flex{
+  display: flex;
+}

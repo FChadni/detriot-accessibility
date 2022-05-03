@@ -1,0 +1,80 @@
+.resultContainer{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin: 15px;
+    padding: 0 15px 0 15px;
+}
+.result{
+    display: flex;
+    flex-direction: row;
+}
+.searchResults{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.resultItem{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.venueImage{
+    margin-right: 15px;
+}
+.venueDetail{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 390px;
+    width: 100%;
+}
+.venueAddress, .venueName, .accessibilityFeature{
+    padding: 5px 0 5px 0;
+}
+.venueName{
+    font-size: 24px;
+    color: var(--color-black);
+    margin-bottom: 2px;
+}
+.venueAddress{
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+.venueCategory span{
+    font-size: 16px;
+    margin-bottom: 2px;
+    background: var(--coloe-bright-blue);
+    padding: 2px 10px 2px 10px;
+    border-radius: 15px;
+}
+.accessibilityFeature{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    row-gap: 10px;
+}
+
+.accessibilityIcon{
+    background-color: var(--coloe-bright-blue);
+    border-radius: 45px;
+    padding: 2px 5px 2px 5px;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.accessibilityText{
+    display: block;
+}
+
+.readMore{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10%;
+    transform: translate(50%,50%);
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    font-size: var(--body-font-size);
+    padding: 10px 15px 10px 15px;
+    border-radius: 50px;
+    border: 0;
+    margin: 10px 0 10px 0;
+}
