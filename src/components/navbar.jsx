@@ -12,9 +12,6 @@ function Navbar(props) {
                         <Link to="/"><span className="navbar_link">HOME</span></Link>
                     </li>
                     <li className="navbar_item">
-                        <Link to="/venue"><span className="navbar_link">VENUE</span></Link>
-                    </li>
-                    <li className="navbar_item">
                         <Link to="/about"><span className="navbar_link">ABOUT</span></Link>
                     </li>
                 </ul>

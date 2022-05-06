@@ -31,7 +31,12 @@ function Search(props) {
                     <div className="result">
                         <h2 className="offscreen">Search Results</h2>
                         <div className="searchResults">
-                            {data?.filter(data => data.name.toLowerCase().includes(term.toLowerCase()))
+                            {data?.filter(data =>
+                                data.name.toLowerCase().includes(term.toLowerCase()) ||
+                                data.address.toLowerCase().includes(term.toLowerCase()) ||
+                                data.category.toLowerCase().includes(term.toLowerCase()) ||
+                                data.accessibility.includes(term)
+                            )
                                 .map((item, index) => (
                                     <div className="resultItem" key={index}>
                                         <div className="venueImage"><img src={ven} alt="Venue"/></div>

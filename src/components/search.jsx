@@ -25,18 +25,26 @@ function Search(props) {
 
     const handleSearch = (e) =>{
         e.preventDefault();
-        console.log("input", input)
-        dispatch({
-            type: actionTypes.SET_SEARCH_TERM,
-            term: input
-        })
-        navigate("/search");
+        if(input.length !== 0) {
+            console.log("input", input)
+            dispatch({
+                type: actionTypes.SET_SEARCH_TERM,
+                term: input
+            })
+            navigate("/search");
+        }
     }
 
     const onSearch = (searchTerm) => {
         setInput(searchTerm);
-        // handleSearch(setInput(searchTerm));
-        console.log("search ", searchTerm);
+        if(searchTerm.length !== 0){
+            console.log("search ", searchTerm);
+            dispatch({
+                type: actionTypes.SET_SEARCH_TERM,
+                term: searchTerm
+            })
+            navigate("/search")
+        }
     }
 
     return (
