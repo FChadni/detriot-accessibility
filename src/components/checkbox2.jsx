@@ -1,20 +1,6 @@
 import React, {useState} from 'react';
 import "../css/checkbox.css"
 
-const Category = [
-    {"id": 1, "name": "aquarium"},
-    {"id": 2, "name": "casino"},
-    {"id": 3, "name": "convention center"},
-    {"id": 4, "name": "entertainment"},
-    {"id": 5, "name": "museum"},
-    {"id": 6, "name": "park"},
-    {"id": 7, "name": "play area"},
-    {"id": 8, "name": "stadium"},
-    {"id": 9, "name": "shopping"},
-    {"id": 10, "name": "sporting event"},
-    {"id": 11, "name": "zoo"},
-]
-
 const Accessibility = [
     {"id": 1, "name": "assisted listening device"},
     {"id": 2, "name": "deaf or hard of hearing"},
@@ -24,7 +10,7 @@ const Accessibility = [
     {"id": 6, "name": "sensory"},
 ]
 
-function CheckboxFilter(props) {
+function Checkbox2(props) {
     const [Checked, setChecked] = useState([]);
 
     const handleCheck = (item) => {
@@ -41,19 +27,6 @@ function CheckboxFilter(props) {
 
     return (
         <div className="filterContainer">
-            <div className="filterBy">FILTER BY</div>
-            <p className="filterType">Category</p>
-
-            {Category.map((item, index) => (
-                <div className="checkboxItems" key={index}>
-                    <input type="checkbox" className="check"
-                           checked={Checked.indexOf(item.name) === -1 ? false : true}
-                           onChange={() => handleCheck(item.name)}
-                    />
-                    <span className="checkboxItem">{item.name}</span></div>
-            ))
-            }
-
             <p className="filterType">Accessibility</p>
             {Accessibility.map((item, index) => (
                 <div className="checkboxItems" key={index}>
@@ -68,4 +41,4 @@ function CheckboxFilter(props) {
     );
 }
 
-export default CheckboxFilter;
+export default Checkbox2;

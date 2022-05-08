@@ -66,18 +66,18 @@ function Search(props) {
                     {data.filter((item) => {
                         const searchTerm = input.toLowerCase();
                         const pokename = item.name.toLowerCase();
+                        const vencategory = item.category.toLowerCase();
 
                         return (
-                            searchTerm
-                            && pokename.startsWith(searchTerm)
-                            && pokename !== searchTerm
+                            (searchTerm && pokename.startsWith(searchTerm) && pokename !== searchTerm ) ||
+                            (searchTerm && vencategory.startsWith(searchTerm) && vencategory !== searchTerm)
                         )
                     })
                         .map((item) => (
                             <div className="suggestion-list"
-                                 onClick={() => onSearch(item.name)}
-                                 key={item.name}>
-                                {item.name}
+                                 onClick={() => onSearch(item.name || item.category)}
+                                 key={item.name || item.category}>
+                                {item.name} is a {item.category}
                             </div>
                         ))}
                 </div>

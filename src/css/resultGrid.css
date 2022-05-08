@@ -1,15 +1,3 @@
-.container{
-    display: block;
-    margin: 5px;
-    padding: 10px;
-}
-.layout{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    text-align: right;
-    margin-right: 10px;
-}
 .gridLayout, .listLayout{
     display: flex;
     font-size: 18px;
@@ -25,72 +13,72 @@
     color: var(--color-white);
     font-weight: bold;
 }
-.resultContainer{
-    display: grid;
-    grid-template-columns: 20% 80%;
-    margin: 15px;
-    padding: 0 15px 0 15px;
-}
-.result{
+.result2{
     display: flex;
     flex-direction: row;
 }
-.searchResults{
+.searchResults2{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto auto auto;
+    row-gap: 10px;
+    column-gap: 10px;
 }
-.resultItem{
+.resultItem2{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 20px;
 }
-.venueImage{
-    margin-right: 15px;
+.venueImage2 img{
+    display: flex;
+    min-width: 100px;
+    width: 100%;
+    border-radius: 5px;
+    /*margin-right: 15px;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
 }
-.venueDetail{
+.venueDetail2{
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 390px;
-    width: 100%;
 }
-.venueAddress, .venueName, .accessibilityFeature{
+.venueAddress2, .venueName2, .accessibilityFeature2{
     padding: 5px 0 5px 0;
 }
-.venueName{
-    font-size: 24px;
+.venueName2{
+    font-size: 18px;
     color: var(--color-black);
     margin-bottom: 2px;
 }
-.venueAddress{
-    font-size: 20px;
+.venueAddress2{
+    font-size: 16px;
     margin-bottom: 2px;
 }
-.venueCategory span{
+.venueCategory2 span{
     font-size: 16px;
     margin-bottom: 2px;
     background: var(--coloe-bright-blue);
     padding: 2px 10px 2px 10px;
     border-radius: 15px;
 }
-.accessibilityFeature{
+.accessibilityFeature2{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     row-gap: 10px;
 }
 
-.accessibilityIcon{
+.accessibilityIcon2{
     background-color: var(--coloe-bright-blue);
     border-radius: 45px;
     padding: 2px 5px 2px 5px;
     font-size: 20px;
     margin-right: 10px;
 }
-.accessibilityText{
+.accessibilityText2{
     display: block;
 }
 
-.readMore{
+.readMore2{
     display: flex;
     justify-items: center;
     justify-content: center;
