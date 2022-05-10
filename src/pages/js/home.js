@@ -5,46 +5,65 @@ import Main from "../../components/brand";
 import axios from "axios";
 import Checkbox from "../../components/checkbox";
 import Checkbox2 from "../../components/checkbox2";
-// import ven from "../../image/image.png";
-// import Popup from "../../components/popup";
 import {IoGrid} from "react-icons/io5"
 import {IoList} from "react-icons/io5"
 import VenueCard from "../../components/venueCard";
+
+
+import { useSelector } from "react-redux";
 import VenueCardGrid from "../../components/venueCardGrid";
+import {useDispatch} from "react-redux";
+import {setVenues} from "../../redux/actions/venueActions";
+
 
 function Home(props) {
     const [data, setData] = useState([]);
-    // const [show, setShow] = useState(false);
-    // const [pokeItem, setItem] = useState();
-
     const [Filters, setFilters] = useState({
         category: [],
         Accessibility: []
     });
-    // Handling search functionality in this function
-    const filterCategory = async (value) => {
-        data.filter((i) =>
-            console.log(i.accessibility)
-        )
-        await axios(`https://dap-project-api.herokuapp.com/venues`)
+
+    const venues = useSelector((state) => state);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        loadData1();
+    },[]);
+    const loadData = async () => {
+        return await axios.get(`https://dap-project-api.herokuapp.com/venues`)
             .then((response) => {
-                setData(response.data.filter((i) => {
-                    return(
-                        i.category.includes(value)
-                    )
-                }))
+                setData(response.data);
             })
-            .catch((err) => console.log(err))
-    };
+            .catch((err) => console.log(err));
+    }
+    const loadData1 = async () => {
+        const response =  await axios.get(`https://dap-project-api.herokuapp.com/venues`)
+            .catch((err) => console.log(err));
+        dispatch(setVenues(response.data));
+    }
+
+    console.log("venues: ", venues)
+
+    let c = false;
+    const changeView = () => {
+        c = true;
+        console.log(c)
+    }
+
+
     const showFilterResults = async (filters) => {
         console.log(filters)
         await axios(`https://dap-project-api.herokuapp.com/venues`)
             .then((response) => {
-                setData(response.data.filter((i) => {
-                    return(
-                        filters.category.includes(i.category)
-                    )
-                }))
+                if(filters.category.length !== 0){
+                    setData(response.data.filter((i) => {
+                        return(
+                            filters.category.includes(i.category)
+                        )
+                    }))
+                }else{
+                    setData(response.data)
+                }
             })
             .catch((err) => console.log(err))
     }
@@ -79,83 +98,37 @@ function Home(props) {
         setFilters(newFilters)
     }
 
-    //  This function calls the loadData function
-    useEffect(() => {
-        loadData();
-    },[]);
-    //  This function loads all the data on the page
-    const loadData = async () => {
-        return await axios.get(`https://dap-project-api.herokuapp.com/venues`)
-            .then((response) => {
-                setData(response.data);
-            })
-            .catch((err) => console.log(err));
-    }
-
-    const changeLayout = () => {
-        console.log("clicked on grid view")
-
-        // resStyle = {
-        //     display: "flex",
-        //     flexdirection: "column"
-        // }
-    }
-
 
     return (
         <div>
             <Navbar/>
             <Main/>
+            <VenueCardGrid/>
 
-            {data && (
-                <section className="container">
-                    <div className="layout">
-                        <button className="gridLayout btn" onClick={changeLayout}><IoGrid/> GRID VIEW </button>
-                        <button className="listLayout btn active"><IoList/> LIST VIEW </button>
-                    </div>
-                    <div className="resultContainer">
-                        {/*  This is filtering section */}
-                        <div className="filter">
-                            <Checkbox handleFilters={filters => handleFilters(filters, "category")}/>
-                            <Checkbox2 handleFilters={filters => handleFilters2(filters, "accessibility")}/>
-                        </div>
+            {/*{data && (*/}
+            {/*    <section className="container">*/}
+            {/*        <div className="layout">*/}
+            {/*            <button className="gridLayout btn" onClick={changeView} ><IoGrid/> GRID VIEW </button>*/}
+            {/*            <button className="listLayout btn active"><IoList/> LIST VIEW </button>*/}
+            {/*        </div>*/}
+            {/*        <div className="resultContainer">*/}
+            {/*            /!*  This is filtering section *!/*/}
+            {/*            <div className="filter">*/}
+            {/*                <Checkbox handleFilters={filters => handleFilters(filters, "category")}/>*/}
+            {/*                <Checkbox2 handleFilters={filters => handleFilters2(filters, "accessibility")}/>*/}
+            {/*            </div>*/}
 
-                        {/*<VenueCard venue={data}/>*/}
-                        <VenueCardGrid venue={data}/>
+            {/*            /!*{c === true ? (*!/*/}
+            {/*            /!*    <VenueCard venue={data}/>*!/*/}
+            {/*            /!*) : (*!/*/}
+            {/*            /!*<VenueCardGrid venue={data}/>*!/*/}
+            {/*            /!*)}*!/*/}
 
-                        {/*<div className="result">*/}
-                        {/*    <h2 className="offscreen">Search Results</h2>*/}
-                        {/*    <div className="searchResults">*/}
-                        {/*        {data.length === 0 ? (*/}
-                        {/*            <h1>No data Found, Please Try again</h1>*/}
-                        {/*        ) : (*/}
-                        {/*            data.map((item, index) => {*/}
-                        {/*                return(*/}
-                        {/*                    <div className="resultItem" key={index}>*/}
-                        {/*                        <div className="venueImage"><img src={ven} alt="Venue"/></div>*/}
-                        {/*                        <div className="venueDetail">*/}
-                        {/*                            <div className="venueName">{item.name}</div>*/}
-                        {/*                            <div className="venueAddress">{item.address}</div>*/}
-                        {/*                            <div className="venueCategory"><span>{item.category}</span></div>*/}
-                        {/*                            <div className="accessibilityFeature">*/}
-                        {/*                                {item.accessibility.map((access,index) => (*/}
-                        {/*                                    <div className="accessibilityText" key={index}>{access}</div>*/}
-                        {/*                                ))}*/}
-                        {/*                            </div>*/}
-                        {/*                            <div>*/}
-                        {/*                                <button className="readMore" type="submit"*/}
-                        {/*                                        aria-label="Read More Button"*/}
-                        {/*                                        onClick={() => { setShow(true); setItem(item) }}>Read More</button>*/}
-                        {/*                            </div>*/}
-                        {/*                        </div>*/}
-                        {/*                    </div>*/}
-                        {/*                )}))}*/}
-                        {/*        <Popup show={show} item={pokeItem} onClose={ () => setShow(false) }/>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
-                    </div>
-                </section>
-            )}
+            {/*            <VenueCardGrid/>*/}
+
+            {/*        </div>*/}
+            {/*    </section>*/}
+            {/*)}*/}
         </div>
     );
 }

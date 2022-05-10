@@ -7,6 +7,11 @@ import "../css/result.css"
 function VenueCard({venue}) {
     const [show, setShow] = useState(false);
     const [pokeItem, setItem] = useState();
+    const [limit, setLimit] = useState(4);
+    
+    const loadMore = () => {
+      setLimit(prevState => prevState + 4);
+    }
 
     return (
         <div className="result">
@@ -15,7 +20,7 @@ function VenueCard({venue}) {
                 {venue.length === 0 ? (
                     <h1>No data Found, Please Try again</h1>
                 ) : (
-                    venue.map((item, index) => {
+                    venue.slice(0, limit).map((item, index) => {
                         return(
                             <div className="resultItem" key={index}>
                                 <div className="venueImage"><img src={ven} alt="Venue"/></div>
@@ -37,6 +42,10 @@ function VenueCard({venue}) {
                             </div>
                         )}))}
                 <Popup show={show} item={pokeItem} onClose={ () => setShow(false) }/>
+                {(limit <= venue?.length) &&
+                    <button onClick={loadMore}>LOAD MORE</button>
+                }
+                {/*<button onClick={loadMore}>LOAD MORE</button>*/}
             </div>
         </div>
     );

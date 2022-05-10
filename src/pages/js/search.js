@@ -18,6 +18,11 @@ function Search(props) {
     const [show, setShow] = useState(false);
     const [pokeItem, setItem] = useState();
 
+    // const [limit, setLimit] = useState(4);
+    // const loadMore = () => {
+    //     setLimit(prevState => prevState + 4);
+    // }
+
     // Display
     return (
         <div>
@@ -57,6 +62,9 @@ function Search(props) {
                                     </div>
                                 ))}
                             <Popup show={show} item={pokeItem} onClose={ () => setShow(false) }/>
+                            {/*{(limit <= data.length) &&*/}
+                            {/*    <div className="loadMore2"><button className="loadMoreBtn2" onClick={loadMore}>LOAD MORE</button></div>*/}
+                            {/*}*/}
                         </div>
                     </div>
                 </section>
