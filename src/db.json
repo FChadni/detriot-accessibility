@@ -1,0 +1,90 @@
+{
+  "venues" : [
+    {
+      "id" : 0,
+      "image" : "images/image.png",
+      "name" : "Arab American National Museum",
+      "address" : "13624 Michigan Ave, Dearborn, MI 48126",
+      "accessibility": ["assisted listening device","deaf or hard of hearing","parking","restrooms",
+        "sensory","wheelchair"],
+      "phone" : "313-429-2535",
+      "email" : "jsalamey@accesscommunity.org",
+      "category" : "museum",
+      "description" : "The Arab American National Museum (AANM) is the first and only museum of its kind in the United States devoted to recording the Arab American experience. Since opening in 2005, AANM’s mission has been to document, preserve and present the history, culture and contributions of Arab Americans. The exhibitions cover the Arab world and the history of Arab Americans from the first immigrants who arrived in the late 19th century to today. AANM has one of the most extensive archives of Arab American historical documents, oral histories and artifacts. They are the only museum in the country that actively collects Arab American art."
+    },
+    {
+      "id" : 1,
+      "image" : "images/image.png",
+      "name" : "The Aretha Franklin Ampitheatre",
+      "address" : "2600 Atwater St, Detroit, MI 48207",
+      "accessibility": ["elevator","parking", "wheelchair"],
+      "phone" : "313-393-0292",
+      "email" : "smausi@trpnow.com",
+      "category" : "entertainment",
+      "description" : "Aretha Franklin Amphitheatre is the most exciting concert space in the heart of downtown Detroit. This unique waterfront venue is the epicenter of live entertainment in the summer for metropolitan Detroit."
+    },
+    {
+      "id" : 2,
+      "image" : "images/image.png",
+      "name" : "Beacon Park",
+      "address" : "1901 Grand River Ave, Detroit, MI, 48226",
+      "accessibility": ["elevator", "wheelchair"],
+      "category" : "park",
+      "description" :"Beacon Park opened in July 2017 and spans 1.2 acres in Downtown Detroit. It features stunning light installations, an open lawn space and a contemporary two-story restaurant. The park hosts a program of daily organized activities from musical performances and children’s events, to art installations, local markets and more."
+    },
+    {
+      "id" : 3,
+      "image" : "images/image.png",
+      "name" : "Belle Isle Aquarium",
+      "address" : "3 Inselruhe Ave, Detroit, MI 48207",
+      "accessibility": ["deaf or hard of hearing","elevator","restrooms", "wheelchair"],
+      "phone" : "313-331-7760",
+      "email" : "jsalamey@accesscommunity.org",
+      "category" : "aquarium",
+      "description" :"The Belle Isle Aquarium was designed by famed Detroit architect, Albert Kahn, and opened on August 18, 1904. It is the oldest aquarium in the country and has served the Detroit community as a beloved attraction for generations."
+    },
+    {
+      "id" : 4,
+      "image" : "images/image.png",
+      "name" : "Belle Isle Park",
+      "address" : "99 Pleasure Drive, Detroit, MI 48207",
+      "accessibility": ["deaf or hard of hearing","elevator","restrooms",
+        "sensory","wheelchair"],
+      "phone" : "313-331-7760",
+      "category" : "park",
+      "description" :"Belle Isle Park is a 982-acre island park located in Detroit with historic, environmental, and cultural resources that have been beloved for generations. The park is home to the Belle Isle Aquarium, Anna Scripps Whitcomb Conservatory, Dossin Great Lakes Museum, Belle Isle Nature Center, the James Scott Memorial Fountain, and more. The Belle Isle Conservancy's mission is to protect, preserve, restore and enhance the natural environment, historic structures, and unique character of Belle Isle as a public park for the enjoyment of all – now and forever."
+    },
+    {
+      "id" : 5,
+      "image" : "images/image.png",
+      "name" : "Belle Isle Nature Center",
+      "address" : "176 Lakeside Dr, Detroit, MI 48207",
+      "accessibility": ["assisted listening device","deaf or hard of hearing","elevator","restrooms",
+        "sensory","wheelchair"],
+      "phone" : "313-852-4056",
+      "category" : "park",
+      "description" :"The Belle Isle Nature Center is located on the beautiful Belle Isle State Park, which offers the perfect location for educational, environmental and natural experiences in the metro Detroit area. This also makes it possible for the Nature Center to provide excellent educational experiences for schools, families and community groups."
+    },
+    {
+      "id" : 6,
+      "image" : "images/image.png",
+      "name" : "Campus Martius Park",
+      "address" : "800 Woodward Ave, Detroit, MI 48226",
+      "accessibility": ["deaf or hard of hearing","sensory","wheelchair"],
+      "category" : "park",
+      "description" :"Campus Martius Park is a city of Detroit treasure and a national and international destination. In 2021, Campus Martius Park was named “Top Public Square” by USA Today and has won countless awards for public space design, management, operations, placemaking, and programming. In the heart of Downtown, Campus Martius Park is Detroit’s Gathering Place for both residents and visitors. This famous park was created in 2004 at the site of Detroit’s point of origin located at 0 miles, where the vision for the city’s plan was originally laid out by Augustus Woodward in 1805."
+    },
+    {
+      "id" : 7,
+      "image" : "images/image.png",
+      "name" : "Comerica Park",
+      "address" : "2100 Woodward Ave, Detroit, MI 48201",
+      "accessibility": ["assisted listening device","deaf or hard of hearing","elevator","parking","restrooms",
+        "sensory","wheelchair"],
+      "phone" : "313-471-7000",
+      "email" : "guestservices@tigers.com",
+      "category" : "sporting/event stadium",
+      "description" :"Comerica Park is a baseball stadium located in Downtown Detroit. It has been the home of Major League Baseball's Detroit Tigers since 2000, when the team left Tiger Stadium. Catch a spectacular view of the Detroit skyline from Comerica Park, home of the Detroit Tigers. Fans flock to Comerica Park each summer to cheer on the Tigers. Not only home to the Detroit Tigers, Comerica Park has also hosted some of the biggest entertainment acts in the world."
+    }
+  ]
+}
