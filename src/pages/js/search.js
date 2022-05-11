@@ -83,8 +83,10 @@ function Search(props) {
                                             <div className="venueAddress2">{item.address}</div>
                                             <div className="venueCategory2"><span>{item.category}</span></div>
                                             <div className="accessibilityFeature2">
-                                                {item.accessibility.map((access,index) => (
-                                                    <div className="accessibilityText2" key={index}>{access}</div>
+                                                {item.accessibility1.map((access,index) => (
+                                                    <div className="accessibilityText2" key={index}>
+                                                        <img className="accessibilityIcon2" src={access[0]} alt="Icons"/>{access[1]}
+                                                    </div>
                                                 ))}
                                             </div>
                                             <Link to={`/venue/${item.id}`}>

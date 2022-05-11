@@ -3,6 +3,9 @@ import axios from "axios";
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {selectedVenue, removeSelectedVenue,} from "../../redux/actions/venueActions";
+import Navbar from "../../components/navbar";
+import ven from "../../image/image.png";
+import "../../css/venueDetail.css"
 
 function DetailPage() {
     const venue = useSelector((state) => state.venue);
@@ -26,18 +29,37 @@ function DetailPage() {
         }
     }, [venueId])
     return(
-        <div>
-            {Object.keys(venue).length === 0 ? (
-                <div>...Loading</div>
-            ):(
-                <div>
-                    <div>{venue.name}</div>
-                    <div>{venue.address}</div>
-                    <div>{venue.category}</div>
-                    <div>{venue.accessibility}</div>
-                    <div>{venue.image}</div>
-                </div>
-            )}
+        <div className="venueDetail">
+            <Navbar/>
+            <section className="venueDetailContainer">
+                {Object.keys(venue).length === 0 ? (
+                    <div>...Loading</div>
+                ):(
+                    <div className="venueDetailMain">
+                        <div className="venueDetailTop">
+                            <div className="venueDetailLeft">
+                                <h2 className="venueDetailName">{venue.name}</h2>
+                                <p className="venueDetailAddress">{venue.address}</p>
+                                <p className="venueDetailPhone">xxx-xxx-xxxx</p>
+                                <p className="venueDetailDes">{venue.description}</p>
+                            </div>
+                            <div className="venueDetailRight">
+                                <img className="venueDetailImage" src={ven} alt=""/>
+                            </div>
+                        </div>
+                        <div className="venueDetailBottom">
+                            {venue.accessibilityDetail.map((item) => {
+                                return(
+                                    <div className="venueDetailAccessibility">
+                                        <div className="accessibilityHeading">{item[0]}</div>
+                                        <div className="accessibilitySubHeading">{item[1]}</div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                )}
+            </section>
         </div>
     );
 }

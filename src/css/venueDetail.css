@@ -1,0 +1,73 @@
+.venueDetail{
+    display: block;
+    margin-top: 50px !important;
+}
+.venueDetailContainer{
+    display: flex;
+    padding: 10px 50px 10px 50px;
+}
+.venueDetailMain{
+    display: flex;
+    flex-direction: column;
+}
+.venueDetailTop{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    vertical-align: middle;
+}
+.venueDetailLeft{
+    display: block;
+    margin-right: 10px;
+    padding: 20px;
+    justify-content: center;
+    vertical-align: middle;
+}
+.venueDetailName{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.venueDetailAddress{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.venueDetailPhone{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.venueDetailDes{
+    font-size: 18px;
+    margin: 30px 0 10px 0;
+}
+.venueDetailRight{
+    margin-left: 10px;
+}
+.venueDetailImage{
+    padding: 5px;
+    border-radius: 15px;
+}
+.venueDetailBottom{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.venueDetailAccessibility{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    /*justify-content: center;*/
+    /*vertical-align: middle;*/
+    border: 1px solid rgb(211, 211, 211);
+}
+.accessibilityHeading{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.accessibilitySubHeading{
+    font-size: 18px;
+}
+

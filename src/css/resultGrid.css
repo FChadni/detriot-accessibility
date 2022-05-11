@@ -64,21 +64,26 @@
 /*}*/
 .accessibilityFeature2{
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
     row-gap: 5px;
     justify-content: space-between;
-    padding: 20px 0 20px 0;
+    vertical-align: middle;
+    /*padding: 20px 0 20px 0;*/
 }
 
 .accessibilityIcon2{
     background-color: var(--coloe-bright-blue);
     border-radius: 45px;
-    padding: 2px 5px 2px 5px;
-    font-size: 20px;
+    /*padding: 2px 5px 2px 5px;*/
+    /*font-size: 20px;*/
     margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
 }
 .accessibilityText2{
     display: block;
+    font-size: 18px;
 }
 
 .readMore2{

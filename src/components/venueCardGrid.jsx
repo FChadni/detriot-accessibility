@@ -15,6 +15,7 @@ function VenueCardGrid() {
         setLimit(prevState => prevState + 4);
     }
     const venues = useSelector((state) => state.allVenues.venues);
+    console.log(venues[1])
     return (
         <div className="result2">
             <div className="res">
@@ -32,9 +33,10 @@ function VenueCardGrid() {
                                     <div className="venueCategory2"><span><strong>Venue Type: </strong> {item.category}</span></div>
                                     <div className="venueAddress2"><strong>Address: </strong>{item.address}</div>
                                     <div className="accessibilityFeature2">
-                                        {/*<div className="accessibilityIcon2"><IoGrid/></div>*/}
-                                        {item.accessibility.map((access,index) => (
-                                            <div className="accessibilityText2" key={index}><IoGrid/> {access}</div>
+                                        {item.accessibility1.map((access,index) => (
+                                            <div className="accessibilityText2" key={index}>
+                                                <img className="accessibilityIcon2" src={access[0]} alt="Icons"/>{access[1]}
+                                            </div>
                                         ))}
                                     </div>
                                     <Link to={`/venue/${item.id}`}>
