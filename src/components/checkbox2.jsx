@@ -2,12 +2,14 @@ import React, {useState} from 'react';
 import "../css/checkbox.css"
 
 const Accessibility = [
-    {"id": 1, "name": "assisted listening device"},
-    {"id": 2, "name": "deaf or hard of hearing"},
-    {"id": 3, "name": "elevator"},
-    {"id": 4, "name": "parking"},
-    {"id": 5, "name": "restrooms"},
-    {"id": 6, "name": "sensory"},
+    {"id": 1, "name": "Accessible Parking"},
+    {"id": 2, "name": "Accessible Restroom"},
+    {"id": 3, "name": "ASL Interpreter"},
+    {"id": 4, "name": "Elevator"},
+    {"id": 5, "name": "Listening Device"},
+    {"id": 6, "name": "Sensory Kit"},
+    {"id": 7, "name": "Service Animal"},
+    {"id": 8, "name": "Wheelchair Accessible"},
 ]
 
 function Checkbox2(props) {

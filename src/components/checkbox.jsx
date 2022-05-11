@@ -16,12 +16,14 @@ const Category = [
 ]
 
 const Accessibility = [
-    {"id": 1, "name": "assisted listening device"},
-    {"id": 2, "name": "deaf or hard of hearing"},
-    {"id": 3, "name": "elevator"},
-    {"id": 4, "name": "parking"},
-    {"id": 5, "name": "restrooms"},
-    {"id": 6, "name": "sensory"},
+    {"id": 1, "name": "Accessible Parking"},
+    {"id": 2, "name": "Accessible Restroom"},
+    {"id": 3, "name": "ASL Interpreter"},
+    {"id": 4, "name": "Elevator"},
+    {"id": 5, "name": "Listening Device"},
+    {"id": 6, "name": "Sensory Kit"},
+    {"id": 7, "name": "Service Animal"},
+    {"id": 8, "name": "Wheelchair Accessible"},
 ]
 
 function CheckboxFilter(props) {
@@ -42,7 +44,7 @@ function CheckboxFilter(props) {
     return (
         <div className="filterContainer">
             <div className="filterBy">FILTER BY</div>
-            <p className="filterType">Category</p>
+            <p className="filterType">Venue Type</p>
 
             {Category.map((item, index) => (
                 <div className="checkboxItems" key={index}>
@@ -54,16 +56,16 @@ function CheckboxFilter(props) {
             ))
             }
 
-            <p className="filterType">Accessibility</p>
-            {Accessibility.map((item, index) => (
-                <div className="checkboxItems" key={index}>
-                    <input type="checkbox" className="check"
-                           checked={Checked.indexOf(item.name) === -1 ? false : true}
-                           onChange={() => handleCheck(item.name)}
-                    />
-                    <span className="checkboxItem">{item.name}</span></div>
-            ))
-            }
+            {/*<p className="filterType">Accessibility</p>*/}
+            {/*{Accessibility.map((item, index) => (*/}
+            {/*    <div className="checkboxItems" key={index}>*/}
+            {/*        <input type="checkbox" className="check"*/}
+            {/*               checked={Checked.indexOf(item.name) === -1 ? false : true}*/}
+            {/*               onChange={() => handleCheck(item.name)}*/}
+            {/*        />*/}
+            {/*        <span className="checkboxItem">{item.name}</span></div>*/}
+            {/*))*/}
+            {/*}*/}
         </div>
     );
 }

@@ -26,12 +26,17 @@ main{
     flex-direction: row;
     justify-items: center;
     padding: var(--xsmall-padding) var(--xsmall-padding) var(--xsmall-padding) var(--xsmall-padding);
-    border-radius: 45px;
+    border-radius: 25px;
     border: 1px solid var(--color-black);
     width: 1000px;
     justify-content: center;
     align-items: center;
     position: relative;
+}
+.searchIcon{
+    font-size: 25px;
+    padding: 8px 10px 5px 10px;
+    color: lightslategray;
 }
 .search-icon, .clear-icon{
     font-size: 25px;
@@ -87,11 +92,11 @@ main{
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 280px;
-    left: 70px;
+    top: 291px;
+    left: 172px;
     border: 1px solid gray;
-    background: #f2faff;
-    width: 950px;
+    background: var(--color-white);
+    width: 960px;
 }
 .suggestion:empty{
     border: none;
@@ -99,5 +104,7 @@ main{
 .suggestion-list{
     cursor: pointer;
     text-align: start;
-    margin: 2px 0;
+    margin: 2px 30px 2px 30px;
+    font-size: 18px;
+
 }

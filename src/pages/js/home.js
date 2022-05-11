@@ -19,9 +19,12 @@ import {setVenues} from "../../redux/actions/venueActions";
 function Home(props) {
     // const [data, setData] = useState([]);
     const [Filters, setFilters] = useState({
-        category: [],
-        Accessibility: []
+        category: []
     });
+    const [Filters2, setFilters2] = useState({
+        accessibility: []
+    });
+    console.log("f", Filters2)
 
     const venues = useSelector((state) => state);
     const dispatch = useDispatch();
@@ -34,13 +37,6 @@ function Home(props) {
             .catch((err) => console.log(err));
         dispatch(setVenues(response.data));
     }
-
-    // console.log("venues: ", venues)
-    // let c = false;
-    // const changeView = () => {
-    //     c = true;
-    //     console.log(c)
-    // }
 
 
     const showFilterResults = async (filters) => {
@@ -64,6 +60,37 @@ function Home(props) {
         setFilters(newFilters)
     }
 
+    const showFilterResults2 = async (filters2) => {
+        console.log(filters2)
+        const response = await axios
+            .get(`https://dap-project-api.herokuapp.com/venues`)
+            .catch((err) => console.log(err))
+        if(filters2.accessibility.length !== 0){
+            dispatch(setVenues(response.data.filter((i) => {
+                return(
+                    filters2.accessibility.includes(i.parking) ||
+                    filters2.accessibility.includes(i.restroom) ||
+                    filters2.accessibility.includes(i.asl) ||
+                    filters2.accessibility.includes(i.elevator) ||
+                    filters2.accessibility.includes(i.device) ||
+                    filters2.accessibility.includes(i.sensory) ||
+                    filters2.accessibility.includes(i.animal) ||
+                    filters2.accessibility.includes(i.wheelchair)
+                )
+            })))
+        }else{
+            dispatch(setVenues(response.data));
+        }
+    }
+    const handleFilters2 = (filters2, filterType2) => {
+        console.log("filter2: ",filters2)
+        const newFilters2 = { ...Filters2 }
+        newFilters2[filterType2] = filters2
+        showFilterResults2(newFilters2);
+        setFilters2(newFilters2)
+    }
+
+
 
     return (
         <div>
@@ -79,6 +106,7 @@ function Home(props) {
                         {/*  This is filtering section */}
                         <div className="filter">
                             <Checkbox handleFilters={filters => handleFilters(filters, "category")}/>
+                            <Checkbox2 handleFilters={filters2 => handleFilters2(filters2, "accessibility")}/>
                         </div>
                         <VenueCardGrid/>
                     </div>

@@ -8,7 +8,9 @@ import useVenueSearch from "../../hooks/useVenueSearch";
 import {useDispatch, useSelector} from "react-redux";
 import { Link } from 'react-router-dom';
 import Checkbox from "../../components/checkbox";
+import Checkbox2 from "../../components/checkbox2";
 import axios from "axios";
+import {setVenues} from "../../redux/actions/venueActions";
 // import {setVenues} from "../../redux/actions/venueActions";
 // import {setData} from "../../hooks/useVenueSearch"
 // import Popup from "../../components/popup";
@@ -26,8 +28,10 @@ function Search(props) {
     console.log("ven", venues)
     const d = useDispatch();
     const [Filters, setFilters] = useState({
-        category: [],
-        Accessibility: []
+        category: []
+    });
+    const [Filters2, setFilters2] = useState({
+        accessibility: []
     });
     const showFilterResults = async (filters) => {
         const response = await axios
@@ -49,6 +53,35 @@ function Search(props) {
         showFilterResults(newFilters);
         setFilters(newFilters)
     }
+    const showFilterResults2 = async (filters2) => {
+        console.log(filters2)
+        const response = await axios
+            .get(`https://dap-project-api.herokuapp.com/venues`)
+            .catch((err) => console.log(err))
+        if(filters2.accessibility.length !== 0){
+            dispatch(setVenues(response.data.filter((i) => {
+                return(
+                    filters2.accessibility.includes(i.parking) ||
+                    filters2.accessibility.includes(i.restroom) ||
+                    filters2.accessibility.includes(i.asl) ||
+                    filters2.accessibility.includes(i.elevator) ||
+                    filters2.accessibility.includes(i.device) ||
+                    filters2.accessibility.includes(i.sensory) ||
+                    filters2.accessibility.includes(i.animal) ||
+                    filters2.accessibility.includes(i.wheelchair)
+                )
+            })))
+        }else{
+            dispatch(setVenues(response.data));
+        }
+    }
+    const handleFilters2 = (filters2, filterType2) => {
+        console.log("filter2: ",filters2)
+        const newFilters2 = { ...Filters2 }
+        newFilters2[filterType2] = filters2
+        showFilterResults2(newFilters2);
+        setFilters2(newFilters2)
+    }
 
     // const [limit, setLimit] = useState(4);
     // const loadMore = () => {
@@ -64,6 +97,7 @@ function Search(props) {
                 <section className="resultContainer">
                     <div className="filter">
                         <Checkbox handleFilters={filters => handleFilters(filters, "category")}/>
+                        <Checkbox2 handleFilters={filters2 => handleFilters2(filters2, "accessibility")}/>
                     </div>
                     <div className="result2">
                         <div className="res">

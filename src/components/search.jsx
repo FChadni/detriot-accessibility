@@ -58,7 +58,7 @@ function Search(props) {
                            value={input}
                            onChange={ (e) => setInput(e.target.value)}
                     />
-                    <div className="clearIcon"><IoClose/></div>
+                    {/*<div className="clearIcon"><IoClose/></div>*/}
                 </div>
                 <button className="searchBtn" type="submit" aria-label="submit button" onClick={handleSearch}>Search</button>
 

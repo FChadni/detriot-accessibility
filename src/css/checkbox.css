@@ -1,0 +1,34 @@
+.filterBy{
+    font-size: 28px;
+    font-weight: bold;
+    background: var(--coloe-bright-blue);
+    margin-right: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+}
+.filterContainer{
+    display: flex;
+    flex-direction: column;
+}
+.filterType{
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 0 5px 0;
+}
+.checkboxItems{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    padding: 3px;
+}
+.check{
+    width: 18px;
+    height: 18px;
+    padding: 10px;
+}
+.checkboxItem{
+    font-size: 18px;
+    margin-left: 10px;
+}

@@ -1,6 +1,33 @@
-.info{
+.aboutUs{
     margin-top: 50px !important;
-    font-size: 24px;
+    margin-right: 50px;
+    margin-left: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding: 25px;
+}
+.about, .ourStory, .stat{
+    margin: 10px;
+}
+.heading{
+    font-size: 24px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.info{
+    font-size: 18px;
+    line-height: 2rem;
+}
+.stat{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-between;
+}
+.subStat{
+    margin: 10px;
+    padding: 5px;
 }
