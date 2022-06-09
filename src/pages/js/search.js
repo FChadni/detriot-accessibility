@@ -11,6 +11,7 @@ import Checkbox from "../../components/checkbox";
 import Checkbox2 from "../../components/checkbox2";
 import axios from "axios";
 import {setVenues} from "../../redux/actions/venueActions";
+import Footer from "../../components/footer";
 // import {setVenues} from "../../redux/actions/venueActions";
 // import {setData} from "../../hooks/useVenueSearch"
 // import Popup from "../../components/popup";
@@ -96,8 +97,8 @@ function Search(props) {
             {term && (
                 <section className="resultContainer">
                     <div className="filter">
-                        <Checkbox handleFilters={filters => handleFilters(filters, "category")}/>
                         <Checkbox2 handleFilters={filters2 => handleFilters2(filters2, "accessibility")}/>
+                        <Checkbox handleFilters={filters => handleFilters(filters, "category")}/>
                     </div>
                     <div className="result2">
                         <div className="res">
@@ -139,6 +140,7 @@ function Search(props) {
                     </div>
                 </section>
             )}
+            <Footer/>
         </div>
     );
 }

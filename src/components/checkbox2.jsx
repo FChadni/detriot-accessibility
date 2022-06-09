@@ -29,7 +29,7 @@ function Checkbox2(props) {
 
     return (
         <div className="filterContainer">
-            <p className="filterType">Accessibility</p>
+            <p className="filterType">Accessibility Features</p>
             {Accessibility.map((item, index) => (
                 <div className="checkboxItems" key={index}>
                     <input type="checkbox" className="check"

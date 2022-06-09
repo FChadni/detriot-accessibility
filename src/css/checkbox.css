@@ -1,23 +1,29 @@
-.filterBy{
-    font-size: 28px;
-    font-weight: bold;
-    background: var(--coloe-bright-blue);
-    margin-right: 5px;
-    margin-top: 20px;
-    border-radius: 5px;
-    padding: 0 5px 0 5px;
-}
+/*.filterBy{*/
+/*    font-size: 28px;*/
+/*    font-weight: bold;*/
+/*    background: var(--coloe-bright-blue);*/
+/*    margin-right: 5px;*/
+/*    margin-top: 20px;*/
+/*    border-radius: 5px;*/
+/*    padding: 0 5px 0 5px;*/
+/*}*/
 .filterContainer{
     display: flex;
     flex-direction: column;
+    margin: 10px 5px 10px 5px;
+    padding: 5px;
 }
 .filterType{
     display: flex;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 5px 0 5px 0;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0 2px 0;
+    border-bottom: 3px solid var(--color-dark-blue);
+    width: 200px;
+    margin-bottom: 10px;
 }
 .checkboxItems{
+    /*margin-top: 10px;*/
     display: flex;
     flex-direction: row;
     vertical-align: middle;

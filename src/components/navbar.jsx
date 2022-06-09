@@ -31,7 +31,7 @@ function Navbar(props) {
                         <Link to="/about"><span className="navbar_link">About</span></Link>
                     </li>
                     <li className="navbar_item">
-                        <Link to="/about"><span className="navbar_link">Contact</span></Link>
+                        <Link to="/contact"><span className="navbar_link">Contact</span></Link>
                     </li>
                 </ul>
             </div>

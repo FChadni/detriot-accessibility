@@ -27,8 +27,8 @@
 }
 .resultContainer{
     display: grid;
-    grid-template-columns: 20% 80%;
-    margin: 15px;
+    grid-template-columns: 25% 75%;
+    margin: 5px 35px 5px 35px;
     padding: 0 15px 0 15px;
 }
 .result{

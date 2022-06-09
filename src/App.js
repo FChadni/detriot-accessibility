@@ -6,6 +6,7 @@ import Search from "./pages/js/search";
 import Venue from "./pages/js/venue";
 import About from "./pages/js/about";
 import DetailPage from "./pages/js/detailPage";
+import Contact from "./pages/js/contact";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path='/search' element={<Search/>} />
             <Route path='/venue' element={<Venue/>} />
             <Route path='/about' element={<About/>} />
+            <Route path='/contact' element={<Contact/>}/>
             <Route path='/venue/:venueId' element={<DetailPage/>} />
           </Routes>
         </div>

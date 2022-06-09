@@ -43,9 +43,7 @@ function CheckboxFilter(props) {
 
     return (
         <div className="filterContainer">
-            <div className="filterBy">FILTER BY</div>
             <p className="filterType">Venue Type</p>
-
             {Category.map((item, index) => (
                 <div className="checkboxItems" key={index}>
                     <input type="checkbox" className="check"
@@ -55,17 +53,6 @@ function CheckboxFilter(props) {
                     <span className="checkboxItem">{item.name}</span></div>
             ))
             }
-
-            {/*<p className="filterType">Accessibility</p>*/}
-            {/*{Accessibility.map((item, index) => (*/}
-            {/*    <div className="checkboxItems" key={index}>*/}
-            {/*        <input type="checkbox" className="check"*/}
-            {/*               checked={Checked.indexOf(item.name) === -1 ? false : true}*/}
-            {/*               onChange={() => handleCheck(item.name)}*/}
-            {/*        />*/}
-            {/*        <span className="checkboxItem">{item.name}</span></div>*/}
-            {/*))*/}
-            {/*}*/}
         </div>
     );
 }

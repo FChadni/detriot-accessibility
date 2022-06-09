@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import {useStateValue} from "../hooks/stateProvider";
 import {actionTypes} from "../hooks/reducer";
 import {IoSearch} from "react-icons/io5"
+import {IoArrowForwardCircleOutline} from "react-icons/io5"
 import {IoClose} from "react-icons/io5"
 
 function Search(props) {
@@ -60,7 +61,7 @@ function Search(props) {
                     />
                     {/*<div className="clearIcon"><IoClose/></div>*/}
                 </div>
-                <button className="searchBtn" type="submit" aria-label="submit button" onClick={handleSearch}>Search</button>
+                <button className="searchBtn" type="submit" aria-label="submit button" onClick={handleSearch}><IoArrowForwardCircleOutline/></button>
 
                 <div className="suggestion">
                     {data.filter((item) => {

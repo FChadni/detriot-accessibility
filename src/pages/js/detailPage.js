@@ -6,6 +6,7 @@ import {selectedVenue, removeSelectedVenue,} from "../../redux/actions/venueActi
 import Navbar from "../../components/navbar";
 import ven from "../../image/image.png";
 import "../../css/venueDetail.css"
+import Footer from "../../components/footer";
 
 function DetailPage() {
     const venue = useSelector((state) => state.venue);
@@ -60,6 +61,7 @@ function DetailPage() {
                     </div>
                 )}
             </section>
+            <Footer/>
         </div>
     );
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-import banner from "../image/home.jpeg";
+import banner from "../image/home.png";
 import "../css/hero.css";
 import {Link} from "react-router-dom";
 import {IoArrowForwardCircleOutline} from "react-icons/io5"
+// import { IoArrowCircleRightIcon } from '@mui/icons-material/ArrowCircleRight';
 
 function Hero(props) {
     return (

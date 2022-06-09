@@ -9,6 +9,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setVenues} from "../../redux/actions/venueActions";
 import Checkbox2 from "../../components/checkbox2";
 import VenueCardGrid from "../../components/venueCardGrid";
+import Footer from "../../components/footer";
 
 
 function Venue(props) {
@@ -158,13 +159,14 @@ function Venue(props) {
                     <div className="resultContainer">
                         {/*  This is filtering section */}
                         <div className="filter">
-                            <Checkbox handleFilters={filters => handleFilters(filters, "category")}/>
                             <Checkbox2 handleFilters={filters2 => handleFilters2(filters2, "accessibility")}/>
+                            <Checkbox handleFilters={filters => handleFilters(filters, "category")}/>
                         </div>
                         <VenueCardGrid/>
                     </div>
                 </section>
             )}
+            <Footer/>
         </div>
         // <div>
         //     <Navbar/>
