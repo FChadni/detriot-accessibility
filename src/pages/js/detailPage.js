@@ -45,7 +45,7 @@ function DetailPage() {
                                 <p className="venueDetailDes">{venue.description}</p>
                             </div>
                             <div className="venueDetailRight">
-                                <img className="venueDetailImage" src={ven} alt=""/>
+                                <img className="venueDetailImage" src={venue.image} alt=""/>
                             </div>
                         </div>
                         <div className="venueDetailBottom">

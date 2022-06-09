@@ -23,7 +23,7 @@ function VenueCard({venue}) {
                     venue.slice(0, limit).map((item, index) => {
                         return(
                             <div className="resultItem" key={index}>
-                                <div className="venueImage"><img src={ven} alt="Venue"/></div>
+                                <div className="venueImage"><img src={item.image} alt="Venue"/></div>
                                 <div className="venueDetail">
                                     <div className="venueName">{item.name}</div>
                                     <div className="venueAddress">{item.address}</div>

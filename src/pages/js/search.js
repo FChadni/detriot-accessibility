@@ -112,7 +112,7 @@ function Search(props) {
                             )
                                 .map((item, index) => (
                                     <div className="resultItem2" key={index}>
-                                        <div className="venueImage2"><img src={ven} alt="Venue"/></div>
+                                        <div className="venueImage2"><img src={item.image} alt="Venue"/></div>
                                         <div className="venueDetail2">
                                             <div className="venueName2">{item.name}</div>
                                             <div className="venueAddress2">{item.address}</div>

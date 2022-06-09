@@ -27,7 +27,7 @@ function VenueCardGrid() {
                     venues.slice(0, limit).map((item) => {
                         return(
                             <div className="resultItem2" key={item.id}>
-                                <div className="venueImage2"><img src={ven} alt="Venue"/></div>
+                                <div className="venueImage2"><img src={item.image} alt="Venue"/></div>
                                 <div className="venueDetail2">
                                     <div className="venueName2">{item.name}</div>
                                     <div className="venueCategory2"><span><strong>Venue Type: </strong> {item.category}</span></div>
